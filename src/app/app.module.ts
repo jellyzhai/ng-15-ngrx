@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { EffectsModule } from '@ngrx/effects';
+import { CounterEffects } from './store/effects/counter.effects';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot(reducers, { metaReducers }),
+    EffectsModule.forRoot([CounterEffects]),
     // isDevMode() ? StoreDevtoolsModule.instrument() : []
   ],
   providers: [],

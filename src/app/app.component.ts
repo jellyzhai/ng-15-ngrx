@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { AppState } from './store';
-import { decrement, increment } from './store/actions/counter.actions';
+import { async_increment, decrement, increment } from './store/actions/counter.actions';
 import {
   selectCount,
   selectCounter,
@@ -28,7 +28,11 @@ export class AppComponent {
   }
 
   increment() {
-    this.store$.dispatch(increment());
+    this.store$.dispatch(increment({count: 5}));
+  }
+
+  async_increment() {
+    this.store$.dispatch(async_increment())
   }
 
   decrement() {
