@@ -11,4 +11,4 @@ increment action 方法:  () => ({
         type
       })
 */
-console.log('increment action 方法: ', increment);
+// console.log('increment action 方法: ', increment);

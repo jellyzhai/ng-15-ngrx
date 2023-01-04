@@ -3,11 +3,11 @@ import { decrement, increment } from '../actions/counter.actions';
 
 export const counterFeatureKey = 'counter';
 
-export interface State {
+export interface CountState {
   count: number
 }
 
-export const initialState: State = {
+export const initialState: CountState = {
   count: 0,
 };
 
@@ -29,4 +29,4 @@ reducer ： ƒ (state = initialState, action) {
     return reducer ? reducer(state, action) : state;
   }
 */
-console.log('reducer ：', reducer);
+// console.log('reducer ：', reducer);

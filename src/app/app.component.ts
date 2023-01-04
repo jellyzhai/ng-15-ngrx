@@ -18,12 +18,12 @@ export class AppComponent {
   counter$: Observable<number>;
 
   constructor(private store$: Store<AppState>) {
-    console.log('Store 服务: ', store$);
+    // console.log('Store 服务: ', store$);
 
     this.counter$ = this.store$.pipe(select(selectCount));
 
     this.store$.pipe(select(selectCounter)).subscribe((value) => {
-      console.log('selectCounter: ', value);
+      // console.log('selectCounter: ', value);
     });
   }
 

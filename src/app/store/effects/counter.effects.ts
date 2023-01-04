@@ -20,7 +20,7 @@ export class CounterEffects {
   // actions$ observable 在每次触发 action 时，都会发出对应的 action
   constructor(private actions$: Actions) {
     this.async_increment_effect.subscribe((action) => {
-      console.log('ngrx 在 effects 中自动触发的 action： ', action)
+      // console.log('ngrx 在 effects 中自动触发的 action： ', action)
     });
   }
 }

@@ -1,11 +1,11 @@
-import { createFeatureSelector, createSelector, State } from '@ngrx/store';
-import { counterFeatureKey } from '../reducers/counter.reducer';
+import { createFeatureSelector, createSelector } from '@ngrx/store';
+import { counterFeatureKey, CountState } from '../reducers/counter.reducer';
 
-export const selectCounter = createFeatureSelector(counterFeatureKey);
+export const selectCounter = createFeatureSelector<CountState>(counterFeatureKey);
 
 export const selectCount = createSelector(
   selectCounter,
-  (state: any) => state.count
+  state => state.count
 );
 
 /*

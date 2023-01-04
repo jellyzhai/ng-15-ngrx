@@ -8,10 +8,9 @@ import {
 } from '@ngrx/store';
 import * as fromCounter from './reducers/counter.reducer';
 
-
 export interface AppState {
 
-  [fromCounter.counterFeatureKey]: fromCounter.State;
+  [fromCounter.counterFeatureKey]: fromCounter.CountState;
 }
 
 export const reducers: ActionReducerMap<AppState> = {
@@ -21,9 +20,9 @@ export const reducers: ActionReducerMap<AppState> = {
 function logger(reducer: ActionReducer<AppState>): ActionReducer<any> {
   return (state, action) => {
     const newResult = reducer(state, action);
-    console.log('最新的状态： ', newResult);
-    console.log('之前的状态： ', state);
-    console.log('action： ', action);
+    // console.log('最新的状态： ', newResult);
+    // console.log('之前的状态： ', state);
+    // console.log('action： ', action);
     return newResult
   }
 }

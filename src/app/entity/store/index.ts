@@ -10,15 +10,15 @@ import * as fromTodo from './reducers/todo.reducer';
 
 export const stateFeatureKey = 'state';
 
-export interface EntityState {
+export interface EntityStateI {
 
   [fromTodo.todoFeatureKey]: fromTodo.TodoState;
 }
 
-export const reducers: ActionReducerMap<EntityState> = {
+export const reducers: ActionReducerMap<EntityStateI> = {
 
   [fromTodo.todoFeatureKey]: fromTodo.reducer,
 };
 
 
-export const metaReducers: MetaReducer<EntityState>[] = isDevMode() ? [] : [];
+export const metaReducers: MetaReducer<EntityStateI>[] = isDevMode() ? [] : [];
